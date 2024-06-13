@@ -1,0 +1,159 @@
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Amatic SC",  sans-serif;
+  --nav-font: "Inter",  sans-serif;
+  scroll-behavior: smooth;
+  --background-color: #ffffff;
+  --default-color: #212529;
+  --heading-color: #37373f;
+  --accent-color: #ce1212;
+  --contrast-color: #ffffff;
+}
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+  .navmenu {
+    padding: 0;
+  }
+  .navmenu ul {
+    color: #141414;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  .navmenu>ul>li {
+    white-space: nowrap;
+    padding: 0px 30px;
+  }
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+  transition: text-decoration 0.3s ease;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #141414;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 92px;
+  overflow: clip;
+}
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--default-font);
+}
+.section-title p {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: var(--heading-font);
+}
+.section-title p .description-title {
+  color: var(--accent-color);
+}
+.home {
+  --background-color: color-mix(in srgb, var(--default-color), transparent 94%);
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+}
+.home h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+}
+.home p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 5px 0 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+#about{
+  padding-top: 1%;
+}
+#collection{
+  padding-top: 1%;
+}
+.collection .shoe {
+  text-align-last: center;
+}
+.collection .shoe .menu-img {
+  padding: 0 60px;
+  margin-bottom: 15px;
+}
+.collection .shoe h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-family: var(--default-font);
+}
+.collection  .shoe .brand {
+  font-family: var(--nav-font);
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-bottom: 5px;
+}
+.collection  .shoe .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+#contact{
+  padding-top: 10%;
+}
+.contact .form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
